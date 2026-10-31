@@ -1,0 +1,559 @@
+/* =========================================
+   BIRTHDAY SURPRISE FRANKLIN
+   NAVY BLUE & GOLD ANIMATED THEME
+   ========================================= */
+
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --navy: #08182d;
+    --navy-light: #142d49;
+    --gold: #f4d58d;
+    --gold-light: #ffe8ae;
+    --white: #f7f9ff;
+    --text: #dce6f5;
+}
+
+/* LATAR BELAKANG */
+html {
+    min-height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(
+        135deg,
+        #08182d,
+        #142d49,
+        #0a1c32,
+        #102742
+    );
+    background-size: 300% 300%;
+    animation: backgroundMove 12s ease infinite;
+    color: var(--white);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+@keyframes backgroundMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* AREA WEBSITE */
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* HALAMAN */
+.screen {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 18px;
+}
+
+/* TRANSISI HALAMAN */
+#welcomeScreen {
+    width: 100%;
+    animation: screenAppear 1s ease both;
+}
+
+@keyframes screenAppear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* KARTU UTAMA */
+.card {
+    width: calc(100% - 36px);
+    max-width: 760px;
+    margin: 30px auto;
+    padding: 55px 35px;
+    text-align: center;
+    border: 1px solid rgba(244, 213, 141, 0.55);
+    border-radius: 28px;
+    background: rgba(5, 20, 38, 0.92);
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.25),
+        0 0 25px rgba(244, 213, 141, 0.04);
+    animation: cardFloat 6s ease-in-out infinite;
+}
+
+@keyframes cardFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+/* HIASAN */
+.decoration {
+    color: var(--gold);
+    font-size: 27px;
+    letter-spacing: 12px;
+    margin-bottom: 30px;
+    animation: decorationFloat 3s ease-in-out infinite;
+}
+
+@keyframes decorationFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(-2deg);
+    }
+    50% {
+        transform: translateY(-12px) rotate(2deg);
+    }
+}
+
+/* EMOJI KUE */
+.cake {
+    display: block;
+    font-size: 55px;
+    margin: 22px 0;
+    animation: cakeBounce 2s ease-in-out infinite;
+}
+
+@keyframes cakeBounce {
+    0%, 100% {
+        transform: translateY(0) rotate(0);
+    }
+    25% {
+        transform: translateY(-8px) rotate(-4deg);
+    }
+    75% {
+        transform: translateY(-4px) rotate(4deg);
+    }
+}
+
+/* TEKS KECIL */
+.eyebrow {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    animation: fadeUp 1s ease both;
+}
+
+/* JUDUL UTAMA */
+h1 {
+    color: var(--gold);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(36px, 6vw, 66px);
+    line-height: 1.15;
+    margin-bottom: 22px;
+    overflow-wrap: anywhere;
+    animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow {
+    from {
+        text-shadow: 0 0 3px rgba(244, 213, 141, 0.1);
+        transform: scale(1);
+    }
+    to {
+        text-shadow: 0 0 18px rgba(244, 213, 141, 0.35);
+        transform: scale(1.02);
+    }
+}
+
+/* NAMA FRANKLIN */
+h2 {
+    color: var(--gold-light);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(22px, 4vw, 34px);
+    line-height: 1.4;
+    margin-bottom: 18px;
+    overflow-wrap: anywhere;
+    animation: nameAppear 1.2s ease both;
+}
+
+@keyframes nameAppear {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CHAPTER */
+.chapter {
+    color: var(--gold);
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+    animation: fadeUp 1.2s ease both;
+}
+
+/* DESKRIPSI DAN PESAN */
+.description {
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto 30px;
+    color: var(--text);
+    font-size: 17px;
+    line-height: 1.9;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+    animation: fadeUp 1s ease both;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* FOTO FRANKLIN */
+.franklin-photo {
+    display: block;
+    width: 180px !important;
+    height: 220px !important;
+    max-width: 100% !important;
+    object-fit: cover;
+    object-position: center;
+    margin: 25px auto;
+    border: 3px solid var(--gold);
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(244, 213, 141, 0.2);
+    animation:
+        photoReveal 1.5s ease both,
+        photoFloat 4s ease-in-out 1.5s infinite;
+}
+
+@keyframes photoReveal {
+    from {
+        opacity: 0;
+        transform: scale(0.7) translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes photoFloat {
+    0%, 100% {
+        translate: 0 0;
+    }
+    50% {
+        translate: 0 -8px;
+    }
+}
+
+/* FORM PASSWORD */
+#passwordForm {
+    width: 100%;
+}
+
+input {
+    max-width: 100%;
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--gold-light) !important;
+    box-shadow: 0 0 15px rgba(244, 213, 141, 0.25);
+}
+
+/* TOMBOL */
+.button {
+    display: block;
+    width: 100%;
+    max-width: 380px;
+    margin: 25px auto 0;
+    padding: 18px 24px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(
+        135deg,
+        var(--gold-light),
+        #dfbb6b
+    );
+    color: var(--navy);
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 0 rgba(244, 213, 141, 0);
+    animation: buttonPulse 2.5s ease-in-out infinite;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+@keyframes buttonPulse {
+    0%, 100% {
+        box-shadow: 0 0 0 rgba(244, 213, 141, 0);
+    }
+    50% {
+        box-shadow: 0 0 22px rgba(244, 213, 141, 0.3);
+    }
+}
+
+.button:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(244, 213, 141, 0.25);
+}
+
+.button:active {
+    transform: scale(0.97);
+}
+
+/* FOOTER */
+footer {
+    color: #aebdd1;
+    font-size: 13px;
+    letter-spacing: 1px;
+    line-height: 1.8;
+    margin-top: 40px;
+    animation: footerAppear 2s ease both;
+}
+
+@keyframes footerAppear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* KURSOR EFEK MENGETIK */
+.typing-cursor::after {
+    content: "|";
+    display: inline-block;
+    margin-left: 3px;
+    color: var(--gold);
+    animation: cursorBlink 0.8s steps(2, start) infinite;
+}
+
+@keyframes cursorBlink {
+    to {
+        visibility: hidden;
+    }
+}
+
+/* RESPONSIF TABLET DAN HP */
+@media (max-width: 768px) {
+    .card {
+        max-width: 100%;
+        padding: 40px 24px;
+    }
+
+    h1 {
+        font-size: clamp(34px, 8vw, 55px);
+    }
+
+    h2 {
+        font-size: clamp(21px, 5vw, 30px);
+    }
+
+    .decoration {
+        letter-spacing: 7px;
+    }
+}
+
+@media (max-width: 480px) {
+    .screen {
+        padding: 18px 12px;
+    }
+
+    .card {
+        width: 100%;
+        padding: 35px 20px;
+        border-radius: 22px;
+    }
+
+    .decoration {
+        font-size: 22px;
+        letter-spacing: 7px;
+    }
+
+    .cake {
+        font-size: 45px;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+
+    .button {
+        font-size: 15px;
+        padding: 16px 20px;
+    }
+
+    .franklin-photo {
+        width: 150px !important;
+        height: 190px !important;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
+
+/* AKSESIBILITAS: KURANGI ANIMASI JIKA DIMINTA */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+/* AREA STIKER */
+.sticker-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    width: 100%;
+    margin: 0 auto 24px;
+}
+
+/* UKURAN STIKER */
+.birthday-sticker {
+    display: block;
+    width: 105px;
+    height: 105px;
+    max-width: 35%;
+    object-fit: contain;
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.15));
+}
+
+/* STIKER MUNCUL DENGAN EFEK POP */
+.sticker-pop {
+    animation: stickerPop 0.9s ease both,
+               stickerWiggle 3s ease-in-out 0.9s infinite;
+}
+
+/* STIKER MELAYANG */
+.sticker-float {
+    animation: stickerAppear 1s ease both,
+               stickerHover 3.5s ease-in-out 1s infinite;
+}
+
+@keyframes stickerPop {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) rotate(-15deg);
+    }
+    70% {
+        opacity: 1;
+        transform: scale(1.12) rotate(5deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+}
+
+@keyframes stickerAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.7);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes stickerWiggle {
+    0%, 100% {
+        rotate: 0deg;
+    }
+    25% {
+        rotate: -5deg;
+    }
+    75% {
+        rotate: 5deg;
+    }
+}
+
+@keyframes stickerHover {
+    0%, 100% {
+        translate: 0 0;
+    }
+    50% {
+        translate: 0 -9px;
+    }
+}
+
+/* STIKER HALAMAN TERAKHIR */
+.ending-stickers {
+    margin-top: 10px;
+    margin-bottom: 28px;
+}
+
+/* TAMPILAN HP */
+@media (max-width: 480px) {
+    .sticker-row {
+        gap: 14px;
+        margin-bottom: 20px;
+    }
+
+    .birthday-sticker {
+        width: 85px;
+        height: 85px;
+    }
+}
+.share-button {
+    margin-top: 14px;
+}
+
+#shareMessage {
+    margin-top: 18px;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+#passwordForm {
+    width: 100%;
+}
+
+#passwordInput {
+    font-family: Arial, sans-serif;
+}
